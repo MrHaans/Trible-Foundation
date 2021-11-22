@@ -1,19 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Poppins:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Francois+One&family=Poppins:wght@500&display=swap");
 @font-face {
   font-family: mainFont;
   src: url(/Trible-Introduction/font/BebasNeuePro-Bold.0f65175b362323f05e8cf38df285e48d.ttf);
 }
 
+/* UNIVERSAL STYLE */
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
-  font-family: 'Francois One', "Poppins";
-  color: #d0d0d0;
   /* border: 1px red solid; */
 }
 
-/* BODY */
+/* BODY STYLE */
 
 body {
   height: 100vh;
@@ -22,229 +23,161 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  background-color: background: #0A4A94;
-  background: -webkit-linear-gradient(bottom right, #0A4A94, #945F00);
-  background: -moz-linear-gradient(bottom right, #0A4A94, #945F00);
-  background: linear-gradient(to top left, #0A4A94, #945F00);;
 }
 
-/* HEADER */
+/* HEADER STYLE */
+
+/* CONNECTION STATUS */
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 80px;
+  padding: 35px 114px;
 }
 
-.connect-status {
+header .connect-status {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
-.connect-status p {
-  font: normal bold 14px "Poppins";
-}
-
-#dot-symbol {
-  width: 11px;
-  height: 11px;
-  background-color: #d0d0d0;
+header #dot-symbol {
+  width: 10px;
+  height: 10px;
+  background-color: black;
   border-radius: 50%;
 }
 
-nav {
-  width: 750px;
-  padding: 10px 25px;
-}
-
-nav ul {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 24px;
-
-}
+/* NAVBAR LINK STYLE*/
 
 nav ul li {
   list-style: none;
-  padding: 0 10px;
+  padding: 0 15px;
 }
 
 nav ul li a {
   text-decoration: none;
-  font-size: 20px;
 }
 
-.dropdown li {
-    display: inline-block;
+nav {
+  width: 963px;
 }
 
-.custom-btn {
-  width: 130px;
-  height: 40px;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-  outline: none;
+nav ul {
+  margin-left: 145px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 18px;
 }
 
-.connect-wallet {
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown i {
+}
+
+nav button {
   margin-left: auto;
-  width: 130px;
-  height: 40px;
-  line-height: 42px;
-  padding: 0;
-  border: none;
-  background: rgb(255,27,0);
-  background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+  padding: 10px 28px;
+  border-radius: 20px;
 }
 
-.connect-wallet:hover {
-  color: #f0094a;
-  background: transparent;
-   box-shadow:none;
-}
-
-.connect-wallet:before,
-.connect-wallet:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
-  background: #f0094a;
-  box-shadow:
-   -1px -1px 5px 0px #fff,
-   7px 7px 20px 0px #0003,
-   4px 4px 5px 0px #0002;
-  transition:400ms ease all;
-}
-
-.connect-wallet span:before,
-.connect-wallet span:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.9),
-    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-  transition: all 0.3s ease;
-}
-
-.connect-wallet:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
-}
-
-..connect-wallet:hover:before,
-..connect-wallet:hover:after{
-  width:100%;
-  transition:800ms ease all;
-}
-
-/* HERO */
+/* MAIN PAGE & BANNER STYLE*/
 
 section {
+  padding: 0 114px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start;
 }
 
-.main-section {
-  padding: 150px 150px;
-  margin-left: 200px;
+section .main-section {
+  margin-top: 94px;
+  margin-left: 177px;
 }
 
 .main-section h1 {
-    letter-spacing: 8px;
-  margin-top: -80px;
-  font: normal 500 280px "mainFont";
-  background: -webkit-linear-gradient(-86deg, #945F00 5%, #E0991B 53%, #094A94 91%);
-  -webkit-background-clip: text;
-  -webkit-text-stroke: 12px transparent;
-  color: #27211b;
+  height: 350px;
+  width: 816px;
+  font: normal 500 280px "Poppins";
+  line-height: 420px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #6b5934;
 }
 
 .main-section h3 {
-  font: normal bold 25px "Poppins";
+  height: 45px;
+  width: 650px;
+  font: normal 500 30px "Poppins";
+  line-height: 45px;
+  margin-left: 10px;
 }
 
 .main-section p {
-  margin-top: 8px;
-  font: italic 500 15px "Poppins";
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 66px;
+  width: 650px;
+  font: normal 200 20px "Poppins";
+  line-height: 33px;
 }
 
-.main-section .connect-wallet {
-  margin-top: 35px;
-  margin-left: 35%;
-}
-
-.logo {
-  margin-left: -600px;
-  margin-right: 200px;
-  height: 750px;
-  width: 100%;
-  text-align: center;
+.main-section button {
+  margin-left: 30%;
+  margin-top: 10px;
+  padding: 10px 28px;
+  border-radius: 20px;
 }
 
 .logo img {
   object-fit: cover;
+  margin-left: -100px;
 }
 
-/* FOOTER */
+/* FOOTER STYLE */
 
 footer {
-  padding: 15px 80px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 28px;
+  gap: 100px;
+  padding: 0 114px;
 }
 
 footer .social-media {
   width: 200px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
-.social-media img {
-    border: 2px white solid;
-    border-radius: 50%;
-    object-fit: cover;
+footer .social-media img {
+  border-radius: 60%;
+  object-fit: cover;
 }
 
 footer .linked {
-  width: 350px;
+  width: 300px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
 footer .linked a {
   text-decoration: none;
-  font: normal 500 15px "Poppins";
 }
 
 footer .copyright {
-  font: italic 500 15px "Poppins";
+  width: 500px;
+  text-align: center;
+}
+
+footer .copyright p {
 }
